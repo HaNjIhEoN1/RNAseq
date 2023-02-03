@@ -4,9 +4,9 @@ using kallisto https://pachterlab.github.io/kallisto/manual
 ## Index
 Ⅰ. Preparation process
 
-Ⅱ. in linux
+Ⅱ. In Linux
 
-Ⅲ. in R
+Ⅲ. In R
 
 
 ### Ⅰ. Preparation process
