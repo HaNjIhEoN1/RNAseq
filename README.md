@@ -1,7 +1,7 @@
 # RNAseq
 using kallisto
 
-[kalisto manual](https://pachterlab.github.io/kallisto/manual)
+[kallisto manual](https://pachterlab.github.io/kallisto/manual)
 
 [kallisto tximport](https://bioconductor.org/packages/devel/bioc/vignettes/tximport/inst/doc/tximport.html#Introduction)
 
