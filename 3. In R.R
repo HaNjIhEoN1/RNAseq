@@ -12,3 +12,6 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 install.packages("BiocManager")
 BiocManager::install("tximport")
 BiocManager::install("rhdf5")
+
+# metadata parsing
+mr <- read.csv("data/metadata_raw.csv",header=TRUE,stringsAsFactors=F,row.names=1)
