@@ -13,5 +13,8 @@ install.packages("BiocManager")
 BiocManager::install("tximport")
 BiocManager::install("rhdf5")
 
-# metadata parsing
+# metadata parsing 
+## case 1
 mr <- read.csv("data/metadata_raw.csv",header=TRUE,stringsAsFactors=F,row.names=1)
+## case 2
+mr<- read.csv("data/metadata_raw.txt",sep = "\t")
