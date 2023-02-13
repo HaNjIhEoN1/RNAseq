@@ -3,7 +3,7 @@ fasterq-dump -3 'sra_run_id'
 kallisto index -i 'ref.idx' 'ref.fasta' # ref.fasta = reference genome
 mkdir kallisto_quantification
 for i in $(cat srarunidlist.txt)
-  do kallisto quant -i 'ref.idx' -o kallisto_quantification/ fastq/${i}_1.fastq fastq/${i}_2.fastq
+  do kallisto quant -i 'ref.idx' -o kallisto_quantification/${i}/ fastq/${i}_1.fastq fastq/${i}_2.fastq
 done
 
 
