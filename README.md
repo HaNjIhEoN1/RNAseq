@@ -1,6 +1,11 @@
 # RNAseq
-using kallisto https://pachterlab.github.io/kallisto/manual
-https://bioconductor.org/packages/devel/bioc/vignettes/tximport/inst/doc/tximport.html#Introduction
+using kallisto
+
+[kalisto manual](https://pachterlab.github.io/kallisto/manual)
+
+[kallisto tximport](https://bioconductor.org/packages/devel/bioc/vignettes/tximport/inst/doc/tximport.html#Introduction)
+
+[kallisto pipeline](https://nbisweden.github.io/workshop-RNAseq/2011/lab_kallisto.html)
 
 ## Index
 Ⅰ. Preparation process
