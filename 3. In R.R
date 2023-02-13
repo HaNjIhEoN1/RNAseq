@@ -6,7 +6,8 @@ library(tximport) # importing kalisto transcript counts to geneLevels
 library(readr) # Fast readr of files.
 library(rhdf5) # read/convert kalisto output files.  
 
-#If tximport and rhdf5 are not installed you can install them now.
+# If tximport and rhdf5 are not installed you can install them now.
+# Prepare about packages's version
 if (!requireNamespace("BiocManager", quietly = TRUE))
 install.packages("BiocManager")
 BiocManager::install("tximport")
