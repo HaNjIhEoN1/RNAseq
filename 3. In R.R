@@ -27,5 +27,15 @@ files <- paste("kallisto_quantification",
 # designate names for each file
 names(files) <- mr$SampleName # SampleName or Run
 
-
+# ref cdna file parsing
 tx2gene <- read_csv("ref.cdna.csv")
+
+# creating kallisto.tsv
+txi.kallisto.tsv <- tximport(files, type = "kallisto", tx2gene = tx2gene, ignoreAfterBar = TRUE)
+
+# making DESeq file 
+mr = mr %>% mutate($factor = as.factor($factor))
+dds <- DESeqDataSetFromTximport(txi.kallisto.tsv, mr, ~$factor)
+
+test = DESeq(dds)
+
