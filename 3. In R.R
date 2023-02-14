@@ -18,3 +18,14 @@ BiocManager::install("rhdf5")
 mr <- read.csv("data/metadata_raw.csv",header=TRUE,stringsAsFactors=F,row.names=1)
 ## case 2
 mr<- read.csv("data/metadata_raw.txt",sep = "\t")
+
+# making abundance.tsv files's path
+files <- paste("kallisto_quantification",
+               list.files(path = "kallisto_quantification",pattern = "abundance.tsv", recursive = TRUE),
+               sep = "/")
+
+# designate names for each file
+names(files) <- mr$SampleName # SampleName or Run
+
+
+tx2gene <- read_csv("ref.cdna.csv")
