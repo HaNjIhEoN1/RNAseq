@@ -1,5 +1,5 @@
 # RNAseq
-using kallisto
+using Kallisto, DESeq2
 
 [kallisto manual](https://pachterlab.github.io/kallisto/manual)
 
@@ -7,6 +7,7 @@ using kallisto
 
 [kallisto pipeline](https://nbisweden.github.io/workshop-RNAseq/2011/lab_kallisto.html)
 
+[kallisto to DESeq2](http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
 ## Index
 Ⅰ. Preparation process
 
