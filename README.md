@@ -42,4 +42,4 @@ using Kallisto, DESeq2
 
 ### Ⅱ. [In Linux](https://github.com/HaNjIhEoN1/RNAseq/blob/main/2.%20In%20Linux.sh)
 
-### Ⅲ. [In R - to DESeq2](https://github.com/HaNjIhEoN1/RNAseq/blob/main/3.%20In%20R.R)
+### Ⅲ. [In R - to DESeq2](https://github.com/HaNjIhEoN1/RNAseq/blob/main/3.%20In%20R%20to%20DESeq2.R)
