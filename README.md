@@ -40,5 +40,6 @@ using Kallisto, DESeq2
     3.2 Search 'Oryza sativa' and filtering (Libarylayout = Paired, LibrarySelection = cDNA, Instrument = Illuminihiseq/ Illumine nova seq 6000/ next seq 500, Organism = Oryza sativa Japonica...etc)
     3.3 click 'send to' > select 'run selector' click 'go' > download(metadata) > open as xlsx file > data select
 
-### Ⅱ. In Linux
-  
+### Ⅱ. [In Linux](https://github.com/HaNjIhEoN1/RNAseq/blob/main/2.%20In%20Linux.sh)
+
+### Ⅲ. [In R - to DESeq2](https://github.com/HaNjIhEoN1/RNAseq/blob/main/3.%20In%20R.R)
