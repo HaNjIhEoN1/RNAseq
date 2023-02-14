@@ -13,8 +13,9 @@ using Kallisto, DESeq2
 
 Ⅱ. In Linux
 
-Ⅲ. In R
+Ⅲ. In R - to DESeq2
 
+Ⅳ. In R - visualize
 
 ### Ⅰ. Preparation process
   1. SRA-Toolkit download – https://github.com/ncbi/sra-tools/wiki/HowTo:-fasterq-dump 
@@ -38,3 +39,6 @@ using Kallisto, DESeq2
     3.1 Go to NCBI
     3.2 Search 'Oryza sativa' and filtering (Libarylayout = Paired, LibrarySelection = cDNA, Instrument = Illuminihiseq/ Illumine nova seq 6000/ next seq 500, Organism = Oryza sativa Japonica...etc)
     3.3 click 'send to' > select 'run selector' click 'go' > download(metadata) > open as xlsx file > data select
+
+### Ⅱ. In Linux
+  
