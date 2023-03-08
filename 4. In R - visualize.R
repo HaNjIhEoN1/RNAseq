@@ -20,4 +20,4 @@ ntd <- normTransform(dds)
 library('pheatmap')
 select <- order(rowMeans(counts(dds,normalized=TRUE)),decreasing=TRUE)[1:20]
 df <- as.data.frame(colData(dds)[,c('$factor1','$factor2')])
-pheatmap(assay(ntd)[select,],cluster_rows=FALSE, show_rownames=FALSE,cluster_cols=FALSE, annotation_col=df)
+pheatmap(assay(ntd)[select,],cluster_rows=FALSE, show_rownames=TRUE,cluster_cols=FALSE, annotation_col=df)
