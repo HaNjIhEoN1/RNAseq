@@ -8,6 +8,9 @@ using Kallisto, DESeq2
 [kallisto pipeline](https://nbisweden.github.io/workshop-RNAseq/2011/lab_kallisto.html)
 
 [kallisto to DESeq2](http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
+
+[DESeq2 visualize](https://bgreat.tistory.com/106)
+
 ## Index
 Ⅰ. Preparation process
 
