@@ -38,5 +38,5 @@ mr = mr %>% mutate($factor = as.factor($factor))
 dds <- DESeqDataSetFromTximport(txi.kallisto.tsv, mr, ~$factor)
 
 test = DESeq(dds)
-res <- result(test)
+res <- results(test)
 res
