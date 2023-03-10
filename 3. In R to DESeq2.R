@@ -28,7 +28,7 @@ files <- paste("kallisto_quantification",
 names(files) <- mr$SampleName # SampleName or Run
 
 # ref cdna file parsing
-tx2gene <- read_csv("ref.cdna.csv")
+tx2gene <- read.csv("ref.cdna.csv")
 
 # creating kallisto.tsv
 txi.kallisto.tsv <- tximport(files, type = "kallisto", tx2gene = tx2gene, ignoreAfterBar = TRUE)
