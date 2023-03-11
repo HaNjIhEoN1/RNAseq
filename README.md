@@ -1,5 +1,5 @@
 # RNAseq
-using Kallisto, DESeq2
+using Kallisto, salmon DESeq2
 
 [kallisto manual](https://pachterlab.github.io/kallisto/manual)
 
@@ -33,9 +33,10 @@ using Kallisto, DESeq2
       case1 echo "export PATH=$PATH:$pwd" >> ~/.bashrc >> source ~/.bashrc
       case2 cd  >> vi .bashrc >> add 'export PATH=$PATH:$pwd' in the last line
 
-  2. Kallisto download
+  2. RNAseq program download
   
     2.1 conda install -c bioconda kallisto
+    2.2 conda install -c bioconda salmon
 
   3. Creating Metadata
   
