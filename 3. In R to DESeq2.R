@@ -20,8 +20,8 @@ mr <- read.csv("data/metadata_raw.csv",header=TRUE,stringsAsFactors=F,row.names=
 mr<- read.csv("data/metadata_raw.txt",sep = "\t")
 
 # making abundance.tsv files's path
-files <- paste("kallisto_quantification",
-               list.files(path = "kallisto_quantification",pattern = "abundance.tsv", recursive = TRUE),
+files <- paste("dir",
+               list.files(path = "dir",pattern = "abundance.tsv / quant.sf", recursive = TRUE),
                sep = "/")
 
 # designate names for each file
@@ -31,7 +31,7 @@ names(files) <- mr$SampleName # SampleName or Run
 tx2gene <- read.csv("ref.cdna.csv")
 
 # creating kallisto.tsv
-txi.kallisto.tsv <- tximport(files, type = "kallisto", tx2gene = tx2gene, ignoreAfterBar = TRUE)
+txi.kallisto.tsv <- tximport(files, type = "program name", tx2gene = tx2gene, ignoreAfterBar = TRUE)
 
 # making DESeq file 
 mr = mr %>% mutate($factor = as.factor($factor))
