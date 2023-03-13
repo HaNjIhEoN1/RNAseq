@@ -1,0 +1,13 @@
+Run	Age	Assay Type	Ecotype	geo_loc_name_country	Organism	Sample_Type	TISSUE
+SRR6784632	Z52	OTHER	mutant	USA	Triticum_turgidum	P2_MT_4	peduncle
+SRR6784633	Z52	OTHER	mutant	USA	Triticum_turgidum	P2_MT_3	peduncle
+SRR6784636	Z11	OTHER	wild-type	USA	Triticum_turgidum	LEAF_WT_4	leaf
+SRR6784637	Z11	OTHER	wild-type	USA	Triticum_turgidum	LEAF_WT_3	leaf
+SRR6784640	Z11	OTHER	mutant	USA	Triticum_turgidum	LEAF_MT_4	leaf
+SRR6784641	Z11	OTHER	mutant	USA	Triticum_turgidum	LEAF_MT_3	leaf
+SRR6784642	Z49	OTHER	wild-type	USA	Triticum_turgidum	P1_WT_4	peduncle
+SRR6784643	Z49	OTHER	wild-type	USA	Triticum_turgidum	P1_WT_3	peduncle
+SRR6784656	Z07	OTHER	wild-type	USA	Triticum_turgidum	COL_WT_2	coleoptile
+SRR6784657	Z07	OTHER	wild-type	USA	Triticum_turgidum	COL_WT_1	coleoptile
+SRR6784660	Z07	OTHER	mutant	USA	Triticum_turgidum	COL_MT_2	coleoptile
+SRR6784661	Z07	OTHER	mutant	USA	Triticum_turgidum	COL_MT_1	coleoptile

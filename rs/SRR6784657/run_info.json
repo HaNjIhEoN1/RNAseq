@@ -1,0 +1,13 @@
+{
+	"n_targets": 133744,
+	"n_bootstraps": 0,
+	"n_processed": 47139798,
+	"n_pseudoaligned": 38475235,
+	"n_unique": 23007925,
+	"p_pseudoaligned": 81.6,
+	"p_unique": 48.8,
+	"kallisto_version": "0.44.0",
+	"index_version": 10,
+	"start_time": "Thu Mar  9 20:33:22 2023",
+	"call": "kallisto quant -i ref.idx -o kallisto_quantification/SRR6784657 --single -l 200 -s 30 /DATA/rs/fastq/SRR6784657.fastq"
+}
