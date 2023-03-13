@@ -11,6 +11,8 @@ using Kallisto, salmon DESeq2
 
 [DESeq2 visualize](https://bgreat.tistory.com/106)
 
+[salmon](https://combine-lab.github.io/salmon/getting_started/)
+
 ## Index
 Ⅰ. Preparation process
 
