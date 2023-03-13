@@ -3,21 +3,13 @@ using Kallisto, salmon DESeq2
 
 [kallisto manual](https://pachterlab.github.io/kallisto/manual)
 
-[kallisto tximport](https://bioconductor.org/packages/devel/bioc/vignettes/tximport/inst/doc/tximport.html#Introduction)
-
-[kallisto pipeline](https://nbisweden.github.io/workshop-RNAseq/2011/lab_kallisto.html)
-
-[kallisto to DESeq2](http://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
-
-[DESeq2 visualize](https://bgreat.tistory.com/106)
-
-[salmon](https://combine-lab.github.io/salmon/getting_started/)
+[salmon manual](https://combine-lab.github.io/salmon/getting_started/)
 
 ## Index
 Ⅰ. Preparation process
 
 Ⅱ. In Linux
-
+ 
 Ⅲ. In R - to DESeq2
 
 Ⅳ. In R - visualize
