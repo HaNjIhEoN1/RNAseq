@@ -40,3 +40,11 @@ dds <- DESeqDataSetFromTximport(txi.kallisto.tsv, mr, ~$factor)
 test = DESeq(dds)
 res <- results(test)
 res
+
+
+# filtering
+resultsNames(dds)
+resLFC <- lfcShrink(dds=dds, coef=$, type="apeglm")
+
+up <- res[which(resLFC$log2FoldChange > 1 & resLFC$padj < 0.01),]
+down <- res[which(resLFC$log2FoldChange < -1 & resLFC$padj < 0.01),]
