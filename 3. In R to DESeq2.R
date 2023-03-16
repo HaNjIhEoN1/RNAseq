@@ -37,14 +37,10 @@ txi.kallisto.tsv <- tximport(files, type = "program name", tx2gene = tx2gene, ig
 mr = mr %>% mutate($factor = as.factor($factor))
 dds <- DESeqDataSetFromTximport(txi.kallisto.tsv, mr, ~$factor)
 
-test = DESeq(dds)
-res <- results(test)
-res
-
+dds <- DESeq(dds)
 
 # filtering
-resultsNames(dds)
-resLFC <- lfcShrink(dds=dds, coef=$, type="apeglm")
+res <- result(dds)
 
-up <- res[which(resLFC$log2FoldChange > 1 & resLFC$padj < 0.01),]
-down <- res[which(resLFC$log2FoldChange < -1 & resLFC$padj < 0.01),]
+up <- filter(as.data.frame(res),padj<0.05,log2FoldChange>0.1)
+down <- filter(as.data.frame(res),padj<0.05,abs(log2FoldChange)<1)
