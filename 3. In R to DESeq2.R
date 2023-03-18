@@ -40,7 +40,7 @@ dds <- DESeqDataSetFromTximport(txi.kallisto.tsv, mr, ~$factor)
 dds <- DESeq(dds)
 
 # filtering
-res <- result(dds)
+res <- results(dds)
 
 up <- filter(as.data.frame(res),padj<0.05,log2FoldChange>0.1)
 down <- filter(as.data.frame(res),padj<0.05,abs(log2FoldChange)<1)
