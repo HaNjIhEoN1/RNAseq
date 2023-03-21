@@ -44,4 +44,4 @@ using Kallisto, salmon DESeq2
 
 ### Ⅳ. In R - visualize.R
 
-### Ⅴ. 
+### Ⅴ. Agrigo v2
