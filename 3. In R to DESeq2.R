@@ -45,3 +45,5 @@ res <- results(dds)
 up <- filter(as.data.frame(res),padj<0.05,log2FoldChange>0.1)
 down <- filter(as.data.frame(res),padj<0.05,abs(log2FoldChange)<1)
  resFilt <- res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
+res <- as.data.frame(resfilt)
+write.csv(res,file="path/result.csv")
