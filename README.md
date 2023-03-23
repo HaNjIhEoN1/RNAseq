@@ -10,7 +10,7 @@ using Kallisto, salmon DESeq2, edgeR
 
 Ⅱ. In Linux
  
-Ⅲ. In R - to DESeq2
+Ⅲ. In R - to DESeq2 or edgeR
 
 Ⅳ. In R - visualize
 
