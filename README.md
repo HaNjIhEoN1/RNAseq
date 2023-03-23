@@ -1,5 +1,5 @@
 # RNAseq
-using Kallisto, salmon DESeq2
+using Kallisto, salmon DESeq2, edgeR
 
 [kallisto manual](https://pachterlab.github.io/kallisto/manual)
 
