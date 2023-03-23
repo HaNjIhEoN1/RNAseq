@@ -5,6 +5,8 @@ using Kallisto, salmon DESeq2, edgeR
 
 [salmon manual](https://combine-lab.github.io/salmon/getting_started/)
 
+[edgeR](https://www.youtube.com/watch?v=hQqIBlO_j3o)
+
 ## Index
 Ⅰ. Preparation process
 
