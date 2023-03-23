@@ -29,3 +29,24 @@ sampleDistMatrix <- as.matrix(sampleDists)
 rownames(sampleDistMatrix) <- paste(vsd$Sample_Type)
 colnames(sampleDistMatrix)  <- NULL
 pheatmap::pheatmap(sampleDistMatrix,clustering_distance_rows = sampleDists, clustering_distance_cols = sampleDists)
+
+##compare edgeR, DESeq2 degs
+
+edgeR <- read.csv('rt/CKvsAS/edgerresult.csv')
+deseq2 <- read.csv('rt/CKvsAS/as.csv')
+install.packages('VennDiagram')
+
+install.packages('gplots')
+library(gplots)
+e <- as.data.frame(c(edgeR['gene']))
+d <- as.data.frame(c(deseq2['gene']))
+data <- list(edgeR = e, DESeq2 = d)
+venn(data)
+
+library(VennDiagram)
+
+data<- list(edgeR = edgeR$gene, DESeq2 = deseq2$gene)
+venn.diagram(data, fill = c(3,2),
+             alpha = c(0.5, 0.5),
+             lty = c(1,1), filename = 'test.tiff'
+             )
