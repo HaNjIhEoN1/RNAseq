@@ -63,3 +63,15 @@ ggcorrplot(cor_data)
 
 library(corrplot) 
 corrplot(cor_data)
+
+### example
+test <- readxl::read_excel('표현형 cor.xlsx')
+rownames(test) <- test$ID
+test1 <- na.omit(test)
+test1 <- subset(test1, select=-ID)
+test1_cor <- cor(test1)
+round(test1_cor, 2)
+
+BiocManager::install('corrplot')
+library(corrplot)
+corrplot(test1_cor)
