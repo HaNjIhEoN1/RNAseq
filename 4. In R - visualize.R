@@ -50,3 +50,16 @@ venn.diagram(data, fill = c(3,2),
              alpha = c(0.5, 0.5),
              lty = c(1,1), filename = 'test.tiff'
              scaled = FALSE)
+
+
+# correlation heatmap
+## [caution!!] the data have to be numeric data 
+data <- read.csv('file path')
+cor_data <- cor(data)
+round(cor_data, 2) # Checking data
+
+library(ggcorrplot)
+ggcorrplot(cor_data)
+
+library(corrplot) 
+corrplot(cor_data)
