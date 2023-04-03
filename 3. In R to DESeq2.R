@@ -36,12 +36,11 @@ txi.kallisto.tsv <- tximport(files, type = "program name", tx2gene = tx2gene, ig
 # making DESeq file 
 mr = mr %>% mutate($factor = as.factor($factor))
 dds <- DESeqDataSetFromTximport(txi.kallisto.tsv, mr, ~$factor)
-
+dds$Library.Name <- relevel(dds$Library.Name, ref = 'CK')
 dds <- DESeq(dds)
-
-# filtering
 res <- results(dds)
 
+# filtering
 up <- filter(as.data.frame(res),padj<0.05,log2FoldChange>0.1)
 down <- filter(as.data.frame(res),padj<0.05,abs(log2FoldChange)<1)
  resFilt <- res[which(res$padj < 0.05 & abs(res$log2FoldChange) > 1), ]
