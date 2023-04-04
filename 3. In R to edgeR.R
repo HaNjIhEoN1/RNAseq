@@ -66,3 +66,54 @@ plotMD(qlf)
 abline(h=c(-1,1),col='blue')
 
 summary(decideTests(qlf))
+
+-----------------------------------------------------------------------------------------------------
+
+getwd()
+setwd("C:/Users/jtige/OneDrive/R")
+library(dplyr) # data wrangling
+library(ggplot2) # plotting
+library(edgeR) # rna-seq
+library(tximport) # importing kalisto transcript counts to geneLevels
+library(readr) # Fast readr of files.
+library(rhdf5)
+library(statmod)
+
+mr <- read.csv('rt/CKvsAS/metadata.txt', sep = '\t')
+files <- paste('rt/CKvsAS', list.files(path = 'rt/CKvsAS',pattern = 'abundance.h5',recursive = TRUE),sep = '/')
+names(files) <- mr$Run
+txi.kallisto <- tximport(files, type = 'kallisto', txOut = TRUE)
+head(txi.kallisto$counts)
+cts <- txi.kallisto$counts
+normMat <- txi.kallisto$length
+normMat <- normMat/exp(rowMeans(log(normMat)))
+normCts <- cts/normMat
+
+eff.lib <- calcNormFactors(normCts)*colSums(normCts)
+
+normMat <- sweep(normMat,2,eff.lib,"*")
+normMat <- log(normMat)
+
+group = mr$Library.Name
+y <- DGEList(cts, group = group)
+y <- scaleOffset(y, normMat)
+y$samples$group <- relevel(y$samples$group, ref = 'CK')
+design <- model.matrix(~group)
+keep <- filterByExpr(y,design)
+
+y <- y[keep,]
+y <- calcNormFactors(y)
+y <- estimateDisp(y,design)
+y$common.dispersion
+
+et<- exactTest(y)
+topTags(et)
+summary(decideTests(et))
+etd <- as.data.frame(et)
+etf <- etd[which(abs(etd$logFC)>=2),]
+write.csv(etf,file="rt/CKvsAS/REALAS.csv")
+
+
+plotMD(et)
+abline(h=c(-1,1),col='blue')
+
