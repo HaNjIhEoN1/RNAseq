@@ -36,7 +36,7 @@ txi.kallisto.tsv <- tximport(files, type = "program name", tx2gene = tx2gene, ig
 # making DESeq file 
 mr = mr %>% mutate($factor = as.factor($factor))
 dds <- DESeqDataSetFromTximport(txi.kallisto.tsv, mr, ~$factor)
-dds$Library.Name <- relevel(dds$Library.Name, ref = 'CK')
+dds$'factor' <- relevel(dds$'factor', ref = '$ref')
 dds <- DESeq(dds)
 res <- results(dds)
 
