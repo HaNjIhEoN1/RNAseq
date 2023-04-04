@@ -117,3 +117,35 @@ write.csv(etf,file="rt/CKvsAS/REALAS.csv")
 plotMD(et)
 abline(h=c(-1,1),col='blue')
 
+------------------------------------------------------------------------------------------------
+
+mr <- read.csv('rt/CKvsAS/metadata.txt', sep = '\t')
+files <- paste('rt/CKvsAS', list.files(path = 'rt/CKvsAS',pattern = 'abundance.h5',recursive = TRUE),sep = '/')
+names(files) <- mr$Run
+txi.kallisto <- tximport(files, type = 'kallisto', txOut = TRUE)
+head(txi.kallisto$counts)
+cts <- txi.kallisto$counts
+normMat <- txi.kallisto$length
+normMat <- normMat/exp(rowMeans(log(normMat)))
+normCts <- cts/normMat
+
+eff.lib <- calcNormFactors(normCts)*colSums(normCts)
+
+normMat <- sweep(normMat,2,eff.lib,"*")
+normMat <- log(normMat)
+
+group = mr$Library.Name
+y <- DGEList(cts, group = factor(group))
+keep <- filterByExpr(y = y)
+y <- y[keep, , keep.lib.sizes=FALSE]
+y <- calcNormFactors(y)
+y <- estimateDisp(y)
+design <- model.matrix(~0+group, data = y$samples)
+colnames(design) <- levels(y$samples$group)
+fit <- glmQLFit(y,design)
+qlf <- glmQLFTest(fit, contrast = c(1,-1))
+topTags(qlf)
+
+qld <- as.data.frame(qlf)
+qlf <- qld[which(abs(qld$logFC)>=2),]
+write.csv(qlf,file="rt/CKvsAS/rrrrrAS.csv")
