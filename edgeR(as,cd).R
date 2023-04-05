@@ -46,3 +46,15 @@ write.csv(Asf,file="rt/edgeras.csv")
 Cdd <- as.data.frame(Cd)
 Cdf <- Cdd[which(abs(Cdd$logFC)>=2),]
 write.csv(Cdf,file="rt/edgercd.csv")
+
+as2 <- topTags(As,n = Inf)
+keep <- as2$table$FDR < 0.01& abs(as2$table$logFC) >=2
+asdeg <- as2$table[keep,]
+asdd <- as.data.frame(asdeg)
+write.csv(asdd,file="rt/asddedger.csv")
+
+cd2 <- topTags(Cd,n = Inf)
+keep <- cd2$table$FDR < 0.01& abs(cd2$table$logFC) >=2
+cddeg <- cd2$table[keep,]
+cddd <- as.data.frame(cddeg)
+write.csv(cddd,file="rt/cdddedger.csv")
