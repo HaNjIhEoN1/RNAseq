@@ -25,5 +25,5 @@ cdd <- as.data.frame(cd)
 asf <- asd[which(asd$padj < 0.01 & abs(asd$log2FoldChange) >= 2),]
 cdf <- cdd[which(cdd$padj < 0.01 & abs(cdd$log2FoldChange) >= 2),]
 
-write.csv(asd,file="rt/deseqas.csv")
-write.csv(asd,file="rt/deseqcd.csv")
+write.csv(asf,file="rt/deseqas.csv")
+write.csv(cdf,file="rt/deseqcd.csv")
