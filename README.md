@@ -7,6 +7,8 @@ using Kallisto, salmon DESeq2, edgeR
 
 [edgeR](https://www.youtube.com/watch?v=hQqIBlO_j3o)
 
+[kallisto to DESeq2](https://rpubs.com/sarah_tanja/1028886)
+
 ## Index
 Ⅰ. Preparation process
 
