@@ -37,6 +37,10 @@ txi.kallisto.tsv <- tximport(files, type = "program name", tx2gene = tx2gene, ig
 mr = mr %>% mutate($factor = as.factor($factor))
 dds <- DESeqDataSetFromTximport(txi.kallisto.tsv, mr, ~$factor)
 dds$'factor' <- relevel(dds$'factor', ref = '$ref')
+
+keep <- rowSums(counts(dds)) >= n # n = filtering reads count
+dds <- dds[keep,]
+
 dds <- DESeq(dds)
 res <- results(dds)
 
