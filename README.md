@@ -10,6 +10,8 @@ using Kallisto, salmon DESeq2, edgeR
 [kallisto to DESeq2](https://rpubs.com/sarah_tanja/1028886)
 
 [kallisto to DESeq2_another ref](https://introtogenomics.readthedocs.io/en/latest/2021.11.11.DeseqTutorial.html)
+
+[edgeR DESeq2](https://gtpb.github.io/ADER18F/pages/tutorial1.html)
 ## Index
 Ⅰ. Preparation process
 
